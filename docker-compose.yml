@@ -27,8 +27,12 @@ services:
     volumes:
       - ./api:/src:cached
     environment:
+      PORT: 3001
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
       GOOGLE_APPLICATION_CREDENTIALS: /src/serviceAccountKey.json
     tty: true
     depends_on:
