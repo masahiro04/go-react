@@ -15,9 +15,6 @@ export default function Home() {
       if (!mounted) {
         const response = await blogService.findAll();
         setBlogs(response.data);
-        console.log('-------');
-        console.log(response.data);
-        console.log('-------');
       }
     };
     f();
