@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Card = ({props}: any) => {
+interface CardProps {
+  title: string;
+}
+
+const Card: React.FC<CardProps> = (props) => {
   return <div>{props.title}</div>
 }
 
-export default Card
+export default Card;
