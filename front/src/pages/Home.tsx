@@ -24,12 +24,12 @@ export default function Home() {
     };
   }, []);
 
-  console.log(blogs)
-
   return (
     <>
       <Header />
-      <Card />
+      {
+        blogs.map((blog) => <Card blog={blog} key={blog.id}/>)
+      }
       <Footer />
     </>
   );

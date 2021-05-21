@@ -8,6 +8,7 @@ import (
 )
 
 func FindBlogs(c *gin.Context) {
+	// DBに接続
 	db := c.MustGet("db").(*gorm.DB)
 
 	var blogs []models.Blog

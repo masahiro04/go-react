@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Card = () => {
-  return (
-    <p>aaaaa</p>
-  )
+const Card = ({props}: any) => {
+  return <div>{props.title}</div>
 }
 
 export default Card
