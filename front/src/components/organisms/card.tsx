@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface CardProps {
-  title: string;
-}
+import {CardProps} from '../../types/card';
 
 const Card: React.FC<CardProps> = (props) => {
   return <div>{props.title}</div>
