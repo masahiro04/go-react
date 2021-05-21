@@ -3,11 +3,12 @@ import { combineReducers } from 'redux';
 // import userReducer from './users';
 // import boardReducer from './boards';
 import authReducer from './auth';
+import blogReducer from './blogs';
 
 const reducers = combineReducers({
   // group: groupReducer,
   // board: boardReducer,
-  // user: userReducer,
+  blog: blogReducer,
   auth: authReducer,
 });
 

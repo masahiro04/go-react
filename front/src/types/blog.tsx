@@ -1,4 +1,3 @@
-
 export const GET_BLOGS = 'GET_BLOGS';
 export const GET_BLOG = 'GET_BLOG';
 export const ADD_BLOGS = 'ADD_BLOGS';
@@ -13,7 +12,7 @@ export interface Blog {
 }
 
 export interface BlogState {
-  users: Blog[]
+  blogs: Blog[]
 }
 
 export interface GetBlogsAction {
@@ -39,7 +38,7 @@ export interface UpdateBlogAction {
 
 export interface DeleteBlogAction {
   type: typeof DELETE_BLOG
-  payload: { id: string }
+  payload: { id: number }
 }
 
 export type BlogActionTypes =

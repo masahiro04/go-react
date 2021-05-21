@@ -2,12 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // import the components
-import Home from '../pages/Home';
+import BlogList from '../pages/BlogList';
 // import Signup from './pages/auth/Signup';
 import Login from '../pages/auth/Login';
 //
 // import NotFound from './pages/NotFound';
 import PrivateRoute from './PrivateRoute';
+import BlogForm from '../pages/BlogForm';
 // import ForgetPassword from './pages/auth/ForgetPassword';
 // import ResetPassword from './pages/auth/ResetPassword';
 // import GroupForm from './pages/groups/GroupForm';
@@ -25,7 +26,7 @@ import PrivateRoute from './PrivateRoute';
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const Routes = () => (
   <Switch>
-    <PrivateRoute exact path="/" component={Home} />
+    <PrivateRoute exact path="/" component={BlogList} />
     { /* Auth関連 */ }
     {/*<Route exact path="/signup" component={Signup} />*/}
     <Route exact path="/login" component={Login} />
@@ -38,7 +39,7 @@ const Routes = () => (
     {/*<PrivateRoute exact path="/groups" component={GroupIndex} />*/}
     {/*{ /* Group作成関連 }*/}
     {/*<PrivateRoute exact path="/groups/:id" component={GroupDetail} />*/}
-    {/*<PrivateRoute exact path="/groups/:id/form" component={GroupForm} />*/}
+    <PrivateRoute exact path="/blogs/:id/form" component={BlogForm} />
     {/*/!* <PrivateRoute exact path="/groups/:groupId/users/:id/form" component={UserForm} /> *!/*/}
     
     {/*<PrivateRoute exact path="/groups/:groupId/boards/:id" component={BoardDetail} />*/}

@@ -20,17 +20,17 @@ class Blog {
     return axios.get(`${API_PATH}/blogs/${id}`, this.headers());
   }
 
-  async save(name: string, description: string) {
+  async save(title: string, body: string) {
     return axios.post(`${API_PATH}/blogs`, {
-      name,
-      description,
+      title,
+      body,
     }, this.headers());
   }
 
-  async update(id: null | undefined, name: string, description: string) {
+  async update(id: null | undefined, title: string, description: string) {
     return axios.put(`${API_PATH}/blogs/${id}`, {
       id,
-      name,
+      title,
       description,
     }, this.headers());
   }
