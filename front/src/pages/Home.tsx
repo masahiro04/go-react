@@ -3,6 +3,7 @@ import Footer from '../components/organisms/footer'
 import '../App.css';
 import '../App.css';
 import Header from '../components/organisms/header';
+import Card from '../components/organisms/card';
 import blogService from '../services/blogs';
 import { Blog } from '../types/blog';
 
@@ -22,11 +23,13 @@ export default function Home() {
       mounted = true;
     };
   }, []);
-  
+
+  console.log(blogs)
+
   return (
     <>
       <Header />
-      Home here
+      <Card />
       <Footer />
     </>
   );
