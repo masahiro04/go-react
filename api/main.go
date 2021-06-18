@@ -1,11 +1,12 @@
 package main
 
 import (
-	controllers "api/controllers"
-	"api/models"
+	"api/domain"
+	controllers "api/interfaces/controllers"
+	"time"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"time"
 )
 
 func main() {
@@ -37,7 +38,7 @@ func main() {
 		MaxAge: 24 * time.Hour,
 	}))
 
-	db := models.SetupModels()
+	db := domain.SetupModels()
 
 	r.Use(func(c *gin.Context) {
 		c.Set("db", db)

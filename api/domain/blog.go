@@ -1,4 +1,4 @@
-package models
+package domain
 
 type Blog struct {
 	ID    uint   `json:"id" gorm:"primary_key"`
