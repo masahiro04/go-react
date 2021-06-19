@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-	_ "github./com/jinzhu/gorm/dialects/mysql"
-	"github.com/jinzhu/gorm"
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
 )
 
 type DB struct {
@@ -24,7 +24,8 @@ func NewDB() *DB {
 }
 
 func newDB(d *DB) *DB {
-	db, err := gorm, Open("mysql", d.Username+":", d.Password+"@tcp("+d.Host+")/"+d.DBName+"?charset=utf8&parseTime=True&loc=Local")
+	dsn := "host=" + d.Host + " user=" + d.Username + " password=" + d.Password + " dbname=" + d.DBName + " port=5432"
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic(err.Error())
 	}

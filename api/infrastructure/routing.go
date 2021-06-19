@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"api/interfaces/controllers"
+	"github.com/hiyashikyuri/go-react/api/interfaces/controllers"
 
 	"github.com/gin-gonic/gin"
 )

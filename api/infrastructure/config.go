@@ -20,7 +20,7 @@ type Config struct {
 	}
 }
 
-func NewConig() *Config {
+func NewConfig() *Config {
 	c := new(Config)
 
 	c.DB.Production.Host = "localhost"

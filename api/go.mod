@@ -29,4 +29,6 @@ require (
 	google.golang.org/grpc v1.37.1 // indirect
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	gorm.io/driver/postgres v1.1.0
+	gorm.io/gorm v1.21.11
 )
